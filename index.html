@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পরিসংখ্যান বিশ্লেষণ</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+
+    <div class="container">
+        <h1>📊 পরিসংখ্যানগত ডেটা বিশ্লেষক</h1>
+        <p>দুটি ভেরিয়েবলের (X এবং Y) ডেটা কমা (,) দ্বারা আলাদা করে লিখুন।</p>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="xData">ভেরিয়েবল X ডেটা (যেমন: 1, 2, 3, 4, 5):</label>
+                <textarea id="xData" rows="4" placeholder="কমা সেপারেটেড সংখ্যা লিখুন"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="yData">ভেরিয়েবল Y ডেটা (যেমন: 2, 4, 5, 4, 5):</label>
+                <textarea id="yData" rows="4" placeholder="কমা সেপারেটেড সংখ্যা লিখুন"></textarea>
+            </div>
+            <button onclick="calculateStatistics()">ফলাফল দেখুন</button>
+        </div>
+
+        <hr>
+
+        <div class="output-section" id="outputSection">
+            <h2>📈 বিশ্লেষণ ফলাফল</h2>
+
+            <div class="output-grid">
+                <div class="output-box x-box">
+                    <h3>ভেরিয়েবল X</h3>
+                    <p>গড় (Mean): <span id="meanX">-</span></p>
+                    <p>ভেদাঙ্ক (Variance): <span id="varianceX">-</span></p>
+                    <p>সম্যক বিচ্যুতি (SD): <span id="stdDevX">-</span></p>
+                </div>
+
+                <div class="output-box y-box">
+                    <h3>ভেরিয়েবল Y</h3>
+                    <p>গড় (Mean): <span id="meanY">-</span></p>
+                    <p>ভেদাঙ্ক (Variance): <span id="varianceY">-</span></p>
+                    <p>সম্যক বিচ্যুতি (SD): <span id="stdDevY">-</span></p>
+                </div>
+
+                <div class="output-box relation-box">
+                    <h3>ভেরিয়েবলদ্বয়ের সম্পর্ক</h3>
+                    <p>সহ-ভেদাঙ্ক (Covariance): <span id="covariance">-</span></p>
+                    <p>সহ-সম্পর্ক গুণাঙ্ক (CC): <span id="correlation">-</span></p>
+                    <p>শক্তির মাত্রা (Relation Strength): <span id="strength" class="status-label">-</span></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
